@@ -16,4 +16,7 @@ import gaia.entity.Ressource;
 public interface RessourceDAO extends CrudRepository<Ressource, Long>{
     
     List<Ressource> findByJoueurIdAndRessourceType(long joueurId, Ressource.RessourceType type);
+    
+    long removeByJoueurIdAndRessourceTypeAndProchainCycleMortDeFaimGreaterThan(long joueurId, Ressource.RessourceType type, int cycleActuel);
+
 }

@@ -38,8 +38,10 @@ public class RessourceService {
 
     public void appliqueMortsDeFamine() {
 
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-
+        int cycleActuel = cycleService.getCycleActuel();
+        
+        dao.removeByJoueurIdAndRessourceTypeAndProchainCycleMortDeFaimGreaterThan(0, Ressource.RessourceType.BLE, cycleActuel);
+        
     }
 
     private void supprimeResourcesJoueur(long joueurId, Ressource.RessourceType type, int quantite) throws RessourcesManquantesException {
@@ -88,7 +90,7 @@ public class RessourceService {
                 break;
 
             default:
-                throw new RuntimeException("Cette ressource n'a pas besoin de nourriture");
+                return;
 
         }
 
