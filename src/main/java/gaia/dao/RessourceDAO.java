@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package streaming.dao;
+package gaia.dao;
 
 import java.util.List;
 import org.springframework.data.repository.CrudRepository;
-import streaming.entity.Ressource;
+import gaia.entity.Ressource;
 
 /**
  *

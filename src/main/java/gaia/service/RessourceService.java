@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package streaming.service;
+package gaia.service;
 
 import java.util.HashMap;
 import java.util.List;
@@ -12,12 +12,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import streaming.dao.JoueurDAO;
-import streaming.dao.RessourceDAO;
-import streaming.entity.Joueur;
-import streaming.entity.Ressource;
-import streaming.exception.NourritureIncompatibleException;
-import streaming.exception.RessourcesManquantesException;
+import gaia.dao.JoueurDAO;
+import gaia.dao.RessourceDAO;
+import gaia.entity.Joueur;
+import gaia.entity.Ressource;
+import gaia.exception.NourritureIncompatibleException;
+import gaia.exception.RessourcesManquantesException;
 
 /**
  *

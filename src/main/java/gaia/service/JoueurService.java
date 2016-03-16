@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package streaming.service;
+package gaia.service;
 
-import streaming.dao.JoueurDAO;
+import gaia.dao.JoueurDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import streaming.entity.Joueur;
-import streaming.entity.Ressource;
+import gaia.entity.Joueur;
+import gaia.entity.Ressource;
 
 /**
  *

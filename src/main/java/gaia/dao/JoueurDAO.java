@@ -3,12 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package streaming.exception;
+package gaia.dao;
+
+import java.io.Serializable;
+import org.springframework.data.repository.CrudRepository;
+import gaia.entity.Joueur;
 
 /**
  *
  * @author admin
  */
-public class RessourcesManquantesException extends Exception{
+public interface JoueurDAO extends CrudRepository<Joueur, Long>{
     
 }
