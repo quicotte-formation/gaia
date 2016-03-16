@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package streaming.service;
+package streaming.dao;
 
 import java.io.Serializable;
 import org.springframework.data.repository.CrudRepository;
-import streaming.entity.Effacemoi;
+import streaming.entity.Joueur;
 
 /**
  *
- * @author tom
+ * @author admin
  */
-public interface EffacemoiCrudService extends CrudRepository<Effacemoi, Long>{
+public interface JoueurDAO extends CrudRepository<Joueur, Long>{
     
 }

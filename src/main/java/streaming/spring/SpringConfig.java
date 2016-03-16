@@ -24,7 +24,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 //@EnableAutoConfiguration
 @ComponentScan(basePackages = "streaming") 
 @EnableJpaRepositories(basePackages = "streaming")
-@EnableScheduling
+//@EnableScheduling
 public class SpringConfig {
 
     @Bean

@@ -5,9 +5,7 @@
  */
 package streaming.service;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -18,13 +16,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class ScheduledService {
     
-    @Scheduled(cron = "*/10 * * * * MON-FRI")// sec min heure jour mois jourDuMois
-    public void cron(){
-        System.out.println("*** cron"); 
-    }
+    @Autowired
+    private RessourceService ressourceService;
     
-    @Scheduled(fixedDelay = 2000)// 2 sec entre la FIN du précédent et début suivant
-    public void fixedDelay() throws InterruptedException{
-        System.out.println("*** fixedDelay");
+//    @Scheduled(fixedDelay = 10000)// 2 sec entre la FIN du précédent et début suivant
+    public void batch(){
+        
+        // Applique morts de famine
+        ressourceService.appliqueMortsDeFamine();
+        
+        // Gère récoltes et naissances
+        ressourceService.gererRecoltes();
     }
 }
